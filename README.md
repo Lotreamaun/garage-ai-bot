@@ -9,10 +9,16 @@ Telegram-бот + Mini App: фотографируешь машину — ИИ �
 
 ## Структура проекта
 
-- [`docs/`](./docs) — документация: план разработки, алгоритм оценки уникальности
-- [`backend/`](./backend) — бот (Telegraf) + API + интеграция с vision-моделью + БД
-- [`miniapp/`](./miniapp) — Telegram Mini App (фронтенд "гаража")
+- [`docs/plan.md`](./docs/plan.md) — план разработки: идея, стек, этапы
+- [`docs/uniqueness-algorithm.md`](./docs/uniqueness-algorithm.md) — алгоритм оценки уникальности машины
+- `backend/` — бот (Python + python-telegram-bot) + API + интеграция с vision-моделью + БД
+- `miniapp/` — Telegram Mini App (фронтенд "гаража")
 
-## С чего начать
+## Стек
 
-См. [`docs/plan.md`](./docs/plan.md) — там идея, стек и этапы разработки.
+- **Бот/бэкенд:** Python + [python-telegram-bot](https://github.com/python-telegram-bot/python-telegram-bot) (async)
+- **Mini App:** JS/TS (Node/React), UI в стиле Liquid Glass
+- **БД:** PostgreSQL (SQLite на старте)
+- **AI (vision):** GigaChat + Google Gemini как бэкап
+
+Подробности — в [`docs/plan.md`](./docs/plan.md).
